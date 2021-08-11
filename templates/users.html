@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Student List</h1>
+<table width="100%" border="1px solid black;" style="text-align: left;">
+    <tr>
+        <th>
+            STUDENT NO
+        </th>
+        <th>
+            STUDENT NAME
+        </th>
+        <th>
+            STUDENT DOB
+        </th>
+        <th>
+            STUDENT DOJ
+        </th>
+        <th>
+            Edit
+        </th>
+        <th>
+            Delete
+        </th>
+    </tr>
+    {% for user in entry %}
+    <tr>
+        <td>{{user.STUDENT_NO}}</td>
+        <td>{{user.STUDENT_NAME}}</td>
+        <td>{{user.STUDENT_DOB}}</td>
+        <td>{{user.STUDENT_DOJ}}</td>
+        <td>
+            <a href="update/{{user.STUDENT_NO}}">Update</a>
+        </td>
+        <td>
+            <form method="post" action="/delete">
+                <input type="hidden" value="{{user.STUDENT_NO}}" name="STUDENT_NO">
+                <input type="submit" value="Delete">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

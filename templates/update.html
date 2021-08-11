@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<h1>Update Student Details</h1>
+<form method="post" action="/update">
+    <label> Update Student NO :</label><br>
+    <input type="number" name="student_no" value="{{entry.STUDENT_NO}}"><br><br>
+    <label>Update Student Name:</label><br>
+    <input type="text" name="student_name" value="{{entry.STUDENT_NAME}}" placeholder="Enter Your First Name"><br><br>
+    <label>Update Student DOB:</label><br>
+    <input type="date" name="student_dob" value="{{entry.STUDENT_DOB}}" placeholder="Enter Student Date Of Birth"><br><br>
+    <label>Update Student DOJ:</label><br>
+    <input type="date" name="student_doj" value="{{entry.STUDENT_DOJ}}" placeholder="Enter Student Date Of Joining"><br><br>
+    <input type="submit">
+</form>
+<a href="users">View</a> | <a href="login">Logout</a>
+</body>
+</html>
